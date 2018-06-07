@@ -22,6 +22,7 @@ python rnn.py --symbol=b --epochs=30    # Train a two layers LSTM on asset b’s
 ```
 
 After training, it will print out the performance measures in test set, as well as the plots of loss and kappa in both train and valid set after each epoch.
+
 During training, if a keyboard interrupt (Ctrl-C) is received, training is stopped and the current model is evaluated against the test dataset.
 
 The `rnn.py` script accepts the following arguments:
