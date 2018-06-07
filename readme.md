@@ -1,11 +1,11 @@
 # Price Trend Prediction Using Deep Learning
 
-This software implements the Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) to predict the price movement using high frequency limit order data. For details, please refer to my report [Price Trend Prediction Using Deep Learning](./report.pdf). 
+This software implements the Convolutional Neural Network (CNN) and Recurrent Neural Network (RNN) to predict the price movement using high frequency limit order data. For details, please refer to my report [Price Trend Prediction Using Deep Learning](./report.pdf).
 
 ## Requirements
-— The program is written in Python, and uses [pytorch](http://pytorch.org/), [scikit-learn](http://scikit-learn.org/stable/index.html), [pandas](https://pandas.pydata.org/) and [numpy](http://www.numpy.org/).
-- `pip install -r requirements.txt` If necessary. 
-— A GPU is not necessary, but can provide a significant speed up especially for training a new model. 
+- The program is written in Python, and uses [pytorch](http://pytorch.org/), [scikit-learn](http://scikit-learn.org/stable/index.html), [pandas](https://pandas.pydata.org/) and [numpy](http://www.numpy.org/).
+- If necessary, run `pip install -r requirements.txt`.
+- A GPU is not necessary, but can provide a significant speed up especially for training a new model.
 
 ## Usage
 
@@ -21,7 +21,7 @@ python rnn.py --model=RNN_TANH  # Train a two layers basic RNN model with tanh a
 python rnn.py --symbol=b --epochs=30    # Train a two layers LSTM on asset b’s LOB data, running epoch of 30
 ```
 
-After training, it will print out the performance measures in test set, as well as the plots of loss and kappa in both train and valid set after each epoch. 
+After training, it will print out the performance measures in test set, as well as the plots of loss and kappa in both train and valid set after each epoch.
 During training, if a keyboard interrupt (Ctrl-C) is received, training is stopped and the current model is evaluated against the test dataset.
 
 The `rnn.py` script accepts the following arguments:
@@ -29,9 +29,9 @@ The `rnn.py` script accepts the following arguments:
 ```bash
 optional arguments:
   -h, --help         show this help message and exit
-  --data DATA        location of the market data 
+  --data DATA        location of the market data
   --model MODEL      type of recurrent net (RNN_TANH, RNN_RELU, LSTM, GRU)
-  --symbol SYMBOL    symbol of asset (a, b)	
+  --symbol SYMBOL    symbol of asset (a, b)
   --nhid NHID        number of hidden units per layer
   --nlayers NLAYERS  number of layers
   --lr LR            initial learning rate
@@ -61,7 +61,7 @@ The `cnn.py` script accepts the following arguments:
 ```bash
 optional arguments:
   -h, --help         show this help message and exit
-  --data DATA        location of the market data 
+  --data DATA        location of the market data
   --symbol SYMBOL    symbol of asset (a, b)s
   --lr LR            initial learning rate
   —-decay DECAY      learning rate dacay
@@ -74,5 +74,3 @@ optional arguments:
   --log-interval N   report interval
   --save SAVE        path to save the final model
 ```
-
-
