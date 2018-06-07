@@ -1,0 +1,12 @@
+Files
+two markets: a, b
+five dates: _1 to _5
+
+Data Format
+Column:          Time, bid price, ask price, bid size, ask size
+eg.      20:59:00.091,      3698,      3699,       72,       51
+
+
+Project
+Write a project in any language to predict price movement. 
+You need to define what you want to predict, and provide quality of your prediction(eg. r square).
